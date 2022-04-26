@@ -2,7 +2,8 @@
 # Rapport
 
 Jag skapade en andra aktivitet genom att lägga till den via menyalternativen File -> New -> Activity -> Empty Activity och namngav till "SecondActivity". 
-I den första aktivitetens skärm skapade jag en layout med en knapp som ska starta den andra aktiviteten.  
+I den första aktivitetens skärm skapade jag en layout som innehåller en bild, informationstext, ett fält man kan fylla i sitt användarnamn och en knapp som ska starta den andra aktiviteten.
+Den andra aktivitetens skärm innehåller ett fält som kan ta emot den text som skrivs i på första skärmen och en "logga ut-knapp" som tar användaren till första aktiviteten.
 
 För inloggnings-knappen sattes en onclicklistner som startar en aktivitet och skickar med extras. 
 Figur 1 Kod
