@@ -3,8 +3,33 @@ package com.example.screens;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 public class SecondActivity extends AppCompatActivity {
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        Log.d("==>", "SecondActivity resumed");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("==>", "SecondActivity started");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("==>", "SecondActivity stopped");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("==>", "SecondActivity destroyed");
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
