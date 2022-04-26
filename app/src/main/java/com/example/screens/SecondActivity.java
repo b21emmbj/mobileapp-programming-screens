@@ -53,7 +53,10 @@ public class SecondActivity extends AppCompatActivity {
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d("==>", "onclick detected");
+                Intent intent = new Intent(SecondActivity.this,MainActivity.class);
                 Log.d("==>", "Sign out");
+                startActivity(intent);
             }
         });
     }
