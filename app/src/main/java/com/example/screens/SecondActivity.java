@@ -2,14 +2,17 @@ package com.example.screens;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
 
     private Button signout;
+    private TextView username;
 
     @Override
     protected void onPostResume() {
@@ -40,6 +43,13 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         signout = findViewById(R.id.signout_button);
+
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        username = findViewById(R.id.profile_layout);
+        String name = extras.getString("username");
+        username.setText(name);
+
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
